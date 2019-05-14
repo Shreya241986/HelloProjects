@@ -1,0 +1,37 @@
+#A number is called a prime only if it is not divisible by the 2,....,n-1.the remainder should not be equal to 0
+def check_PrimeNumber():
+  print("Enter a number")
+  num = int(input("> "))
+  j=0
+  if num<2:
+    print("Enter number greater than 1")
+  else:  
+    for i in range(2,num):
+      if((num % i) == 0):
+        print("Number is not a prime number")
+        j=1
+        break
+
+  if j==0 and num>1:
+    print("Number is a prime number")
+
+check_PrimeNumber()   
+
+# Print all prime numbers in an interval
+def print_PrimeNumbers():
+  lower_number = int(input("Enter the lower range"))
+  upper_number = int(input("Enter the upper range"))
+  for i in range(lower_number,upper_number):
+    a=0
+    for j in range(2,i):
+      if((i % j)==0):
+        a=1
+        break
+
+    if(a==0):
+      print(i)   
+
+print_PrimeNumbers() 
+ 
+
+   
